@@ -1,0 +1,13 @@
+version: "3"
+
+services:
+  gateway:
+    build: .
+    image: gateway_image:1.0
+    environment:
+      - FLASK_ENV=development
+    ports:
+      - 5000:5000
+
+  redis:
+    image: redis:6.2.6-alpine
